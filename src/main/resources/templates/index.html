@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="https://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login • Instagram • sarthakdev143</title>
+    <link rel="stylesheet" href="/make-up/index.css">
+    <link rel="stylesheet" href="/make-up/style.css">
+    <link rel="stylesheet" href="/make-up/littles.css">
+</head>
+
+<body>
+    <main>
+
+        <div class="login-form-div">
+            <img class="user-select-none" th:src="@{/imgs/instagram-logo.webp}" alt="Error">
+
+            <div class="or">
+                <span></span> OR <span></span>
+            </div>
+
+            <div class="below-or">
+                <p class="first">
+                    <img src="/imgs/facebook-logo.webp" alt="Error">
+                    Login with Facebook
+                </p>
+                <p class="second"><a href="">Forgot Password?</a></p>
+            </div>
+        </div>
+
+        <div class="sign-up-text-div">
+            <p>Don't have an account? <a th:href="@{/sign-up}">Sign up</a></p>
+        </div>
+
+        <div th:fragment="get-the-app" class="get-the-app-div">
+            <h4>Get the App.</h4>
+
+            <div class="imgs">
+                <img class="first" th:src="@{/imgs/get-it-on-google-play.webp}" alt="Error">
+                <img class="second" th:src="@{/imgs/get-it-from-microsoft.webp}" alt="Error">
+            </div>
+        </div>
+
+        <footer th:fragment="footer">
+
+            <p class="line-1">
+                <a href="">Meta</a>
+                <a href="">About</a>
+                <a href="">Blog</a>
+                <a href="">Jobs</a>
+                <a href="">Help</a>
+                <a href="">API</a>
+                <a href="">Privacy</a>
+                <a href="">Terms</a>
+                <a href="">Location</a>
+                <a href="">Instagram Lite</a>
+                <a href="">Threads</a>
+                <a href="">Contact Uploading & Non Users</a>
+                <a href="">Meta Verified</a>
+            </p>
+
+            <p class="line-2">
+                © 2024. Instagram From <a href="https://github.com/sarthakdev143">sarthakdev143</a>.
+            </p>
+
+            <div class="bottom-gap"></div>
+
+        </footer>
+
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,72 @@
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* background: rgb(197, 197, 197); */
+    padding-top: 2rem;
+
+    .sign-up-form {
+        padding-top: 3rem;
+        padding-bottom: 2rem;
+        width: 27rem;
+        height: auto;
+        border: 0.1rem solid rgb(192, 192, 192);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        img {
+            width: 12rem;
+        }
+
+        .head-text {
+            width: 100%;
+            padding: 1.5rem;
+            /* background: red; */
+            text-align: center;
+            font-size: 1.3rem;
+            color: grey;
+        }
+
+        .login-with-fb-div {
+            width: auto;
+            height: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+
+            img {
+                width: 1.5rem;
+                border-radius: 50%;
+            }
+
+            a {
+                color: #000;
+                text-decoration: none;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        .or {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            /* background: red; */
+            gap: 1rem;
+
+            span {
+                /* background: green; */
+                width: 35%;
+                border-top: 0.1rem solid rgb(192, 192, 192);
+                margin-top: 1vh;
+            }
+        }
+
+        
+    }
+}

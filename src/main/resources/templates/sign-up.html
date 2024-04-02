@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="https://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up • Instagram • sarthakdev143</title>
+
+    <link rel="stylesheet" href="/make-up/index.css">
+    <link rel="stylesheet" href="/make-up/sign-up.css">
+    <link rel="stylesheet" href="/make-up/style.css">
+    <link rel="stylesheet" href="/make-up/littles.css">
+</head>
+
+<body>
+    <main>
+
+        <div class="sign-up-form">
+            <img class="user-select-none" th:src="@{/imgs/instagram-logo.webp}" alt="Error">
+
+            <p class="head-text">Sign up to see photos and videos from your friends.</p>
+
+            <div class="login-with-fb-div">
+                <img th:src="@{/imgs/facebook-logo.webp}" alt="Error">
+                <a href="" class="text">Log in with Facebook</a>
+            </div>
+
+            <div class="or">
+                <span></span> OR <span></span>
+            </div>
+
+            <form th:action="@{/create-account}" th:object="${newUserData}" method="post">
+                <input type="text" th:field="*{mobileNumberOrEmail}" placeholder="Mobile Number or Email" required>
+                <input type="text" th:field="*{fullname}" placeholder="Fullname" required>
+                <input type="text" th:field="*{username}" placeholder="Username" required>
+                <input type="text" th:field="*{password}" placeholder="Password" required>
+
+                <div class="text-of-terms">
+                    <div class="first">
+                        People who use our service may have uploaded your contact information to Instagram.
+                        <a href="">Learn More</a>
+                    </div>
+
+                    <div class="second">
+                        By signing up, you agree to our
+                        <a href="">Terms</a>
+                        ,
+                        <a href="">Privacy Policy</a> and
+                        <a href="">Cookies Policy</a> .
+                    </div>
+                </div>
+
+                <button type="submit">Sign up</button>
+            </form>
+        </div>
+
+        <div class="have-an-account">
+            <p>Have an account? <a th:href="@{/}">Log in</a></p>
+        </div>
+
+        <div th:replace="~{index :: get-the-app}"></div>
+        <div th:replace="~{index :: footer}"></div>
+    </main>
+</body>
+
+</html>
