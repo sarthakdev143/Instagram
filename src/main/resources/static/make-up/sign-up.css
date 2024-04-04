@@ -7,10 +7,10 @@ main {
 
     .sign-up-form {
         padding-top: 3rem;
-        padding-bottom: 2rem;
+        padding-bottom: 0.8rem;
         width: 27rem;
         height: auto;
-        border: 0.1rem solid rgb(192, 192, 192);
+        border: 0.1rem solid rgb(211, 211, 211);
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -67,6 +67,81 @@ main {
             }
         }
 
-        
+        form {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 1rem;
+            padding: 1.5rem 2.9rem;
+            /* background: red; */
+
+            input {
+                width: 100%;
+                height: 3rem;
+                padding-left: 0.8rem;
+                font-size: 0.94rem;
+                border: 0.1rem solid rgb(214, 214, 214);
+                background: rgb(252, 251, 251);
+
+                &:focus {
+                    outline: 0.01rem solid rgb(206, 206, 206);
+                }
+            }
+
+            .first,
+            .second {
+                font-size: 0.95rem;
+                color: grey;
+                line-height: 1.2rem;
+
+                a {
+                    text-decoration: none;
+                    color: rgb(0, 144, 233);
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+
+            .second {
+                margin-top: 1rem;
+            }
+
+            button {
+                width: 90%;
+                height: 2.5rem;
+                background: rgb(0, 157, 255);
+                border-radius: 1rem;
+                border: none;
+                outline: none;
+                color: #fff;
+                font-size: 1rem;
+                font-weight: bolder;
+
+                &:hover {
+                    background: rgba(0, 157, 255, 0.849);
+                }
+            }
+        }
+    }
+
+    .have-an-account {
+        width: 27rem;
+        height: auto;
+        margin: 1rem 0;
+        padding: 1.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 0.1rem solid rgb(192, 192, 192);
+        font-size: 1rem;
+
+        a {
+            text-decoration: none;
+            color: rgb(0, 157, 255);
+        }
     }
 }

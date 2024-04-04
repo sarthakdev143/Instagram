@@ -1,0 +1,138 @@
+body {
+    background: linear-gradient(135deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+    background-size: 600% 600%;
+    animation: gradientAnimation 8s ease infinite;
+
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+    background: #ffffff34;
+    backdrop-filter: blur(1rem);
+
+    ul {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem 3rem;
+        /* background: red; */
+        align-items: center;
+
+        .left,
+        .right {
+            img {
+                filter: brightness(0) invert(1) grayscale(1);
+            }
+
+            color: #fff;
+            display: flex;
+            flex-wrap: wrap;
+        }
+    }
+}
+
+main {
+    width: 100%;
+    height: 100%;
+
+    .table-div {
+        max-height: 42rem;
+        background: rgba(255, 202, 202, 0.377);
+        margin: 3rem;
+        padding: 1rem;
+        overflow: scroll;
+        border-radius: 1rem;
+        scrollbar-width: thin;
+        scroll-behavior: smooth;
+        scrollbar-color: #fff rgba(255, 255, 255, 0);
+
+        table {
+            width: 100%;
+            text-align: center;
+            border-collapse: separate;
+            box-shadow: 0 0 1rem rgba(255, 255, 255, 0.5);
+
+            thead {
+                th {
+                    background: #ffffff34;
+                    padding: 1.3rem;
+                    font-size: 1.2rem;
+                    font-weight: 400;
+                    color: #fff;
+                    position: sticky;
+                    top: 0;
+                    transition: all ease 0.3s;
+                    animation: bgchange linear forwards;
+                }
+            }
+
+            tbody {
+                background: #ffffff20;
+
+
+                tr:hover {
+                    background: rgba(0, 0, 0, 0.116);
+                }
+
+                td {
+                    padding: 1.1rem;
+                    color: #fff;
+                }
+
+                .action {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 0.5rem;
+
+                    .edit,
+                    .delete {
+                        color: #fff;
+                        text-decoration: none;
+                        transition: all ease 0.3s;
+                        border-radius: 0.5rem;
+                        padding: 0.6rem 1.1rem;
+
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+
+                    .edit:hover {
+                        background: rgb(0, 157, 255);
+                    }
+
+                    .delete:hover {
+                        background: red;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@keyframes bgchange {
+    100% {
+        color: #000;
+        background: #ffffff;
+    }
+}

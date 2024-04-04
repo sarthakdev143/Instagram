@@ -5,9 +5,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 public class Web2Application {
-
+	
 	public static void main(String[] args) {
 		SpringApplication.run(Web2Application.class, args);
-		System.out.println("====================== Web Ready ======================");
+		System.out.println("\n====================== Web Ready ======================\n");
 	}
 }

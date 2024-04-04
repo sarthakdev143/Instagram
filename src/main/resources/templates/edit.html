@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Data • Instagram • sarthakdev143</title>
+</head>
+
+<body>
+    <form th:action="@{/save-user}" th:object="${userInfo}" method="POST">
+        <input type="text" th:field="*{id}" hidden>
+        <input type="text" th:field="*{mobileNumberOrEmail}" placeholder="Mobile Number or Email" required>
+        <input type="text" th:field="*{fullname}" placeholder="Fullname" required>
+        <input type="text" th:field="*{username}" placeholder="Username" required>
+        <input type="text" th:field="*{password}" placeholder="Password" required>
+
+        <button class="pointer" type="submit">Save Changes</button>
+    </form>
+</body>
+
+</html>

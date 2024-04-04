@@ -29,7 +29,7 @@
                 <span></span> OR <span></span>
             </div>
 
-            <form th:action="@{/create-account}" th:object="${newUserData}" method="post">
+            <form th:action="@{/save-user}" th:object="${userInfo}" method="post">
                 <input type="text" th:field="*{mobileNumberOrEmail}" placeholder="Mobile Number or Email" required>
                 <input type="text" th:field="*{fullname}" placeholder="Fullname" required>
                 <input type="text" th:field="*{username}" placeholder="Username" required>
@@ -50,7 +50,7 @@
                     </div>
                 </div>
 
-                <button type="submit">Sign up</button>
+                <button class="pointer" type="submit">Sign up</button>
             </form>
         </div>
 
