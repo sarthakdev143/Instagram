@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login • Instagram • sarthakdev143</title>
     <link rel="stylesheet" href="/make-up/index.css">
-    <link rel="stylesheet" href="/make-up/style.css">
-    <link rel="stylesheet" href="/make-up/littles.css">
+        <link rel="stylesheet" href="/make-up/style.css">
+        <link rel="stylesheet" href="/make-up/littles.css">
 </head>
 
 <body>
@@ -16,12 +16,16 @@
         <div class="login-form-div">
             <img class="user-select-none" th:src="@{/imgs/instagram-logo.webp}" alt="Error">
 
+            <div th:if="${error}" class="error-message">
+                <p th:text="${error}"></p>
+            </div>
+
             <form class="form" th:action="@{/login}" th:object="${userInfo}" method="post">
                 <div class="input-tag">
                     <input type="text" th:field="*{username}" placeholder="Username, email or mobile number">
                     <input type="text" th:field="*{password}" placeholder="Password">
                 </div>
-                <button type="submit">Log in</button>
+                <button class="pointer" type="submit">Log in</button>
             </form>
 
             <div class="or">

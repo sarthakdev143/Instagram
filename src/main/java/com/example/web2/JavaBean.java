@@ -1,5 +1,6 @@
 package com.example.web2;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -13,7 +14,14 @@ public class JavaBean {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    private String username, password, fullname, mobileNumberOrEmail;
+
+    @Column(unique = true)
+    private String username;
+
+    @Column(unique = true)
+    private String mobileNumberOrEmail;
+    
+    private String password, fullname;
 
     public JavaBean(Long id, String username, String password, String fullname, String mobileNumberOrEmail) {
         this.id = id;

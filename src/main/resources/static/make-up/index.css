@@ -66,6 +66,12 @@ main {
             }
         }
 
+        .error-message {
+            font-size: 1rem;
+            color: red;
+            margin: 1rem;
+        }
+
         .or {
             width: 100%;
             display: flex;
