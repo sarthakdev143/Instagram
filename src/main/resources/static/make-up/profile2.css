@@ -12,8 +12,7 @@ body {
     cursor: pointer;
     width: 4rem;
     height: 4rem;
-    background: #000;
-    border: 0.2rem solid #fff;
+    border: 0.2rem solid ;
 }
 
 .sidebar {
@@ -36,7 +35,7 @@ body {
 
         .logo {
             height: 2.2rem;
-            filter: brightness(0) invert(1) grayscale(1);
+            filter: brightness(0) invert(1);
         }
     }
 
@@ -66,7 +65,7 @@ body {
             }
 
             .imgDiv {
-                border: 0.1rem #fff solid;
+                border: 0.1rem solid;
                 width: 2.1rem;
                 height: 2.1rem;
                 border-radius: 50%;
@@ -122,7 +121,6 @@ body {
     width: calc(100% - 18.5rem);
     height: 100%;
     padding: 0 10rem;
-    background: #000;
 
     .profile {
         width: 100%;
@@ -260,7 +258,6 @@ body {
 
                 p {
                     gap: 0.5rem;
-                    color: grey;
                     text-transform: lowercase;
                     font-variant: small-caps;
                     padding-top: 1.5rem;
@@ -268,8 +265,7 @@ body {
                 }
 
                 p:first-child {
-                    color: #fff;
-                    border-top: 0.1rem #fff solid;
+                    border-top: 0.1rem solid;
                 }
             }
 

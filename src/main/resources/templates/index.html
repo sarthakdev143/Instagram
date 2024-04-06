@@ -20,7 +20,7 @@
                 <p th:text="${error}"></p>
             </div>
 
-            <form class="form" th:action="@{/login}" th:object="${userInfo}" method="post">
+            <form class="form" th:action="@{/profile}" th:object="${userInfo}" method="post">
                 <div class="input-tag">
                     <input type="text" th:field="*{username}" placeholder="Username, email or mobile number">
                     <input type="text" th:field="*{password}" placeholder="Password">

@@ -9,11 +9,15 @@
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="/make-up/style.css">
     <link rel="stylesheet" href="/make-up/littles.css">
-    <link rel="stylesheet" href="/make-up/profile.css">
+    <!-- <link rel="stylesheet" href="/make-up/profile.css"> -->
+    <link rel="stylesheet" href="/make-up/profile2.css">
     <link rel="stylesheet" href="/make-up/index.css">
 </head>
 
-<body>
+<body id="body">
+    <div class="switch-mode">
+        <!-- Add Icons & The JS To Switch Them.. XD -->
+    </div>
     <div class="sidebar">
         <div class="logoDiv">
             <img class="logo" src="/imgs/instagram-logo.webp" alt="Error 404">
@@ -133,12 +137,12 @@
                     </div>
                     <div class="text-details">
                         <div class="line-1 flex">
-                            <!-- <p th:text="${userInfo.username}"></p> -->
-                            <p>_sarthak.parulekar</p>
+                            <p th:text="${username}"></p>
+                            <!-- <p>_sarthak.parulekar</p> -->
                             <div class="others flex">
-                                <div>Edit Profile</div>
-                                <div>View Archive</div>
-                                <div>Ad Tools</div>
+                                <div class="tools">Edit Profile</div>
+                                <div class="tools">View Archive</div>
+                                <div class="tools">Ad Tools</div>
                             </div>
                             <div class="svgs">
                                 <svg aria-label="Threads" fill="currentColor" height="24" role="img"
@@ -166,8 +170,8 @@
                             <p><span>106</span> following</p>
                         </div>
                         <div class="line-3">
-                            <!-- <p th:text="${userInfo.username}"></p> -->
-                            <p>_sarthak.parulekar</p>
+                            <p th:text="${username}"></p>
+                            <!-- <p>_sarthak.parulekar</p> -->
                             <p>Programmer</p>
                         </div>
                         <div class="line-4">10 Billion accounts reached in the last 30 days. <a href="">View
@@ -251,9 +255,11 @@
                 </div>
             </section>
         </div>
-        
+
         <div th:replace="~{index :: footer}"></div>
     </div>
+
+    <script src="/make-up/script.js"></script>
 </body>
 
 </html>
