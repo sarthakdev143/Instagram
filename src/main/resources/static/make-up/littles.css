@@ -2,15 +2,20 @@
     display: flex;
 }
 
-.logo-size-10 {
+.flex-barabar {
+    display: flex;
+    align-items: center;
+}
+
+.logo-10 {
     width: 10rem;
 }
 
-.logo-size-15 {
+.logo-15 {
     width: 15rem;
 }
 
-.logo-size-20 {
+.logo-20 {
     width: 20rem;
 }
 
@@ -18,10 +23,6 @@
     display: flex;
     justify-content: center;
     align-content: center;
-}
-
-.gap {
-    gap: 5vw;
 }
 
 .relative {
