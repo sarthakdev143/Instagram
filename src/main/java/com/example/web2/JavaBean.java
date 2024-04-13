@@ -1,6 +1,5 @@
 package com.example.web2;
 
-import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -15,24 +14,27 @@ public class JavaBean {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    @Column(unique = true)
     private String username;
 
-    @Column(unique = true)
     private String mobileNumberOrEmail;
-    
-    private String password, fullname;
 
-    public JavaBean(Long id, String username, String password, String fullname, String mobileNumberOrEmail) {
+    private String password;
+
+    private String fullname;
+
+    public JavaBean(Long id, String username, String mobileNumberOrEmail, String password, String fullname) {
         this.id = id;
         this.username = username;
+        this.mobileNumberOrEmail = mobileNumberOrEmail;
         this.password = password;
         this.fullname = fullname;
-        this.mobileNumberOrEmail = mobileNumberOrEmail;
     }
 
     public JavaBean() {
+        // Default constructor
     }
+
+    // Getters and setters
 
     public Long getId() {
         return id;
